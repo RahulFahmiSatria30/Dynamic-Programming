@@ -11,6 +11,14 @@ public class LatihanDynamicPrograming {
     public static void main(String[] args) {
         String identitas = "Rahul Fahmi Satria / X RPL 2 / 28";
         tampilJudul(identitas);
-    
+        int n = tampilInput();
+    }
+    private static int tampilInput() {
+        Scanner scanner = new Scanner (System.in);
+        
+        System.out.print("Bilangan Ke - : ");
+        int n = scanner.nextInt();
+        
+        return n;
     }
 }
