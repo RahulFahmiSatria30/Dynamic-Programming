@@ -18,7 +18,20 @@ public class LatihanDynamicPrograming {
         
         System.out.print("Bilangan Ke - : ");
         int n = scanner.nextInt();
+        BigInteger hasil = fibo(n);
         
         return n;
+    }
+     private static BigInteger fibo(int n) {
+        
+        BigInteger[] hasil = new BigInteger[n];
+        
+        hasil[0] = BigInteger.ONE;
+        hasil[1] =  BigInteger.ONE;
+        
+        for(int i = 2; i < n; i++) {
+        hasil[i] = hasil[i-1].add(hasil[i-2]);
+        }
+        return hasil[n-1];
     }
 }
